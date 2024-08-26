@@ -109,14 +109,14 @@ jobs:
           ref: ${{ needs.tag.outputs.githubTag }}
 
       - name: Login to ghcr.io
-        run: podman login --username ${{ github.repository_owner }} --password ${{ secrets.GITHUB_TOKEN }} ghcr.io
+        run: podman login --username dgolovin --password ${{ secrets.GITHUB_TOKEN }} ghcr.io
 
       - name: Build Image
         id: build-image
         run: |
-          podman build -t ghcr.io/${{ github.repository_owner }}/crc-extension:${{ needs.tag.outputs.extVersion }} . -f ./oci/Containerfile.multistage
-          podman push ghcr.io/${{ github.repository_owner }}/crc-extension:${{ needs.tag.outputs.extVersion }}
-          podman tag ghcr.io/${{ github.repository_owner }}/crc-extension:${{ needs.tag.outputs.extVersion }} ghcr.io/${{ github.repository_owner }}/podman-desktop-extension-ai-lab:latest
-          podman push ghcr.io/${{ github.repository_owner }}/crc-extension:latest
+          podman build -t ghcr.io/dgolovin/crc-extension:${{ needs.tag.outputs.extVersion }} . -f ./oci/Containerfile.multistage
+          podman push ghcr.io/dgolovin/crc-extension:${{ needs.tag.outputs.extVersion }}
+          podman tag ghcr.io/dgolovin/crc-extension:${{ needs.tag.outputs.extVersion }} ghcr.io/dgolovin/podman-desktop-extension-ai-lab:latest
+          podman push ghcr.io/dgolovincrc-extension:latest
 
 
