@@ -80,6 +80,7 @@ jobs:
         if: ${{ github.event.inputs.branch == 'main' }}
         run: |
           git config --local user.name ${{ github.actor }}
+          git pull origin
           CURRENT_VERSION=$(echo "${{ steps.TAG_UTIL.outputs.extVersion }}")
           tmp=${CURRENT_VERSION%.*}
           minor=${tmp#*.}
