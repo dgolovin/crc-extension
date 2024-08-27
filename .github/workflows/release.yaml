@@ -118,6 +118,6 @@ jobs:
           podman build -t ghcr.io/dgolovin/crc-extension:${{ needs.tag.outputs.extVersion }} . -f ./oci/Containerfile.multistage
           podman push ghcr.io/dgolovin/crc-extension:${{ needs.tag.outputs.extVersion }}
           podman tag ghcr.io/dgolovin/crc-extension:${{ needs.tag.outputs.extVersion }} ghcr.io/dgolovin/podman-desktop-extension-ai-lab:latest
-          podman push ghcr.io/dgolovincrc-extension:latest
+          podman push ghcr.io/dgolovin/crc-extension:latest
 
 
