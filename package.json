@@ -146,7 +146,7 @@
     "@types/node": "^20.16.1",
     "@typescript-eslint/eslint-plugin": "^5.55.0",
     "@typescript-eslint/parser": "^5.55.0",
-    "@vitest/coverage-v8": "^2.0.5",
+    "@vitest/coverage-v8": "^4.0.0",
     "byline": "^5.0.0",
     "compare-versions": "^6.1.1",
     "copyfiles": "^2.4.1",
@@ -159,7 +159,7 @@
     "tslib": "^2.7.0",
     "typescript": "^5.5.4",
     "vite": "^5.4.2",
-    "vitest": "^2.0.5",
+    "vitest": "^4.0.0",
     "which": "^4.0.0",
     "zip-local": "^0.3.5"
   },
